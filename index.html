@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="制作したアプリケーション等の作品置き場兼自己紹介の掲示を行っているポートフォリオサイトです。">
+  <meta name="twitter:card" content="summary">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- FontAwesome CSS -->
+  <link href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" rel="stylesheet">
+
+
+  <title>WeirdStorage 作品置き場</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Vue.js CDN -->
+  <!--script src="https://unpkg.com/vue@next"></script> -->
+</head>
+
+<body>
+  <!-- ローディング画面 -->
+  <div class="loader-bg">
+    <div class="loader"></div>
+  </div>
+   <!-- ダークモードヒーロー -->
+   <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">WeirdStorage</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">プログラマーになるための記録と作品の倉庫</p>
+        <!-- 意味は異様な保管場所、他のポートフォリオサイトとはひと味違うサイトにしたいという思いから -->
+      </div>
+    </div>
+  </div>
+  <!-- /ダークモードヒーロー -->
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Page Menu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="レスポンシブナビゲーションバー">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- メニューバー -->
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Works">Works</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="starter-template">
+        <div>
+          <h3 id="Profile">Profile</h3>
+          <p>年齢：２３</p>
+          <p id="birthTime"></p>
+          <script src="birthDay.js"></script>
+          <p>性別：男</p>
+          <p>趣味：プログラミング、旅行、音楽鑑賞（Hardcore,HardStyle etc...）</p>
+          <p>性格：真面目、素直</p>
+          <p>情報系の大学に入学後、プログラミングの学習を開始。金銭的事情で大学中退後、某自動車メーカーの工場で就業しながらN予備校やPaizaなどを利用してプログラミングの学習と基本情報技術者試験の勉強を行い、現在に至る。</p>
+        </div>
+
+        <div>
+          <h3 id="Skill">Skill</h3>
+          <p>（プログラマーの実務未経験、開発経験を積みたい）</p>p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item disabled" aria-disabled="true">資格・検定</li>
+            <li class="list-group-item">第二種電気工事士</li>
+            <li class="list-group-item">基本情報技術者試験　合格</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item disabled" aria-disabled="true">OS</li>
+            <li class="list-group-item disabled" aria-disabled="true">経験年数</li>
+            <li class="list-group-item disabled" aria-disabled="true">レベル</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Windows</li>
+            <li class="list-group-item">４年</li>
+            <li class="list-group-item">開発環境の構築が可能</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Linux(Ubuntu)</li>
+            <li class="list-group-item">１年</li>
+            <li class="list-group-item">開発環境の構築、Githubへのpush、サーバー構築の経験あり</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Docker</li>
+            <li class="list-group-item">1ヶ月</li>
+            <li class="list-group-item">（現在学習中）開発環境の構築経験あり</li>
+          </ul>
+            <li class="list-group-item disabled" aria-disabled="true">言語</li>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">HTML5(HTML)</li>
+            <li class="list-group-item">４年１ヶ月</li>
+            <li class="list-group-item">Bootstrap5を使った静的Webページの作成が可能</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">CSS3(CSS)</li>
+            <li class="list-group-item">４年１ヶ月</li>
+            <li class="list-group-item">静的Webページの簡易的な装飾が可能</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Python</li>
+            <li class="list-group-item">２年１０ヶ月</li>
+            <li class="list-group-item">開発環境の構築、簡易的なアプリケーションの作成が可能</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Java</li>
+            <li class="list-group-item">５ヶ月</li>
+            <li class="list-group-item">（現在学習中）開発環境の構築、簡易的なアプリケーションの作成が可能</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">C++</li>
+            <li class="list-group-item">３ヶ月</li>
+            <li class="list-group-item">（学習中）開発環境の構築、標準入出力の基本的な構文が書ける</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Eclipse</li>
+            <li class="list-group-item">１ヶ月</li>
+            <li class="list-group-item">（現在学習中）開発環境の構築が可能</li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Unity</li>
+            <li class="list-group-item">１年</li>
+            <li class="list-group-item">開発環境の構築、3Dゲームの作成が可能</li>
+          </ul>
+        </div>
+
+      <div class="row">
+        <h2 id="About">About</h3>
+          <div class="col-sm-4">
+            <h3><i class="fa-solid fa-handshake-simple fa-2x"></i><br>協調性</h3>
+            <p>自動車メーカーの工場でライン作業に従事していた経験から、チームで連携して業務を遂行する能力があります。</p>
+          </div>
+          <div class="col-sm-4">
+            <h3><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+              <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"/>
+            </svg>
+            <i class="fa-solid fa-person-circle-question fa-2x"></i><br>向学心</h3>
+            <p>仕事終わりや休日に学習してきた向学心を活かし、情報収集や勉強を欠かさず行います。自分のスキルを磨いていくことを忘れません。</p>
+          </div>
+          <div class="col-sm-4">
+            <h3><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+            <i class="fa-solid fa-person-circle-exclamation fa-2x"></i><br>課題発見力</h3>
+            <p>元職場で作業内容などの改善案を提案して実施してきた経験から、不具合や修正するべき箇所を広い視野で発見し、様々な解決策を用いたトライアルアンドエラーで解決まで導きます。</p>
+          </div>
+
+      <div class="row">
+          <h2 id="Works">Works</h2>
+          <a href="https://github.com/Err0r-SOZGGway" target="_blank"><p>Github</p></a>
+          <a href="timeGame.html"><h3>時間当てゲーム</h3></a>
+          <p>N予備校の教材を参考に制作。20秒ピッタリに止めることを目指すゲーム。</p>
+          <p>使用言語:HTML,CSS,JavaScript</p>
+          <div class="col-sm-6">
+            <h3>あなたのいいところ診断</h3>
+            <p>N予備校のプログラミング入門コースにて制作</p>
+            <p>入力欄に名前を入れると、あなたのいいところを表示してくれる。診断結果は、ツイートボタンよりTwitterでツイートする事が可能。</p>
+            <p>使用言語:HTML(Bootstrap5),CSS,JavaScript</p>
+          </div>
+          <div class="col-sm-6">
+            <a href="https://Err0r-SOZGGway.github.io/assessment/assessment.html">
+              <img src="github_work1.png" class="img-fluid" alt="あなたのいいところ診断サイト">
+            </a>
+          </div>
+          <h3>Openprocessingで作成したスケッチ</h3>
+          <p>openprocessingというサイトで作成したスケッチ。スケッチ内にポインタを置くと周囲に様々な色の円が描写される。</p>
+          <iframe src="https://openprocessing.org/sketch/1174070/embed/" width="600" height="600"></iframe>
+          <h3>ブロック崩しゲーム</h3>
+          <p>Unityで作成したブロック崩しゲーム</p>
+          <img src="Brock.png" class="img-fluid" alt="ブロック崩しゲーム">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#About" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="#Skill" class="nav-link px-2 text-muted">Skill</a></li>
+        <li class="nav-item"><a href="#Works" class="nav-link px-2 text-muted">Works</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2022 S.W.</p>
+    </footer>
+  </div>
+
+  <script src="Loading.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
