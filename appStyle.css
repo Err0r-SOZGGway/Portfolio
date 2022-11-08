@@ -1,0 +1,65 @@
+body{
+  background-color: rgb(228, 246, 211);
+}
+
+.container{
+  text-align:center;
+}
+
+h1{
+  text-align:center;
+  margin-top: 50px;
+}
+
+#app{
+  text-align:center;
+}
+
+.description{
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.formCalendar{
+  width:80%;
+  margin:0 auto;
+  padding:15px 0;
+  margin-bottom:30px;
+  background-color:whitesmoke;
+}
+
+input{
+  padding:5px 10px;
+  min-width:250px;
+}
+input:invalid{
+  background-color: lightgray;
+  padding:5px 10px;
+  min-width:250px;
+}
+
+.formCalendar{
+  color:rgb(0, 128, 128);
+  font-weight:bold;
+  text-align:center;
+}
+
+.error{
+  display: none;
+  font-size: 20px;
+  color: red;
+  font-weight:bold;
+  text-align:center;
+}
+
+
+button{
+  width:40%;
+  background-color: teal;
+  color:white;
+  padding:10px 0;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  margin-bottom: 30px;
+}
