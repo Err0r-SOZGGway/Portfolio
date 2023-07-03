@@ -83,7 +83,12 @@ p    {
       background: #e0ffff;
       border-radius: 50%;
       line-height: 40px;
-     }
+}
+.sketch {
+      width: 75%;
+      margin: auto;
+      display: block;
+}
 .fa-handshake-simple {
       color: rgb(123, 240, 121);
 }
