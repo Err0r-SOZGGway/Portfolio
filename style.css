@@ -73,6 +73,9 @@ p    {
       font-size: 120%;
       font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.title {
+      text-align: center;
+}
 .top_btn {
       position: fixed;
       bottom: 30px;
@@ -88,6 +91,9 @@ p    {
       width: 75%;
       margin: auto;
       display: block;
+}
+.aboutStyle {
+      text-align: center;
 }
 .fa-handshake-simple {
       color: rgb(123, 240, 121);
@@ -112,12 +118,12 @@ p    {
 /* フェードイン(初期値) */
 .js-fadeUp {
       opacity: 0; /* 最初は非表示 */
-      transform: translateY(20px); /* 下に30pxの位置から */
+      transform: translateY(30px); /* 下に30pxの位置から */
       transition: opacity .8s, transform .8s; /* 透過率と縦方向の移動を0.8秒 */
 }
 /* フェードイン(スクロールした後) */
 .js-fadeUp.is-inview {
       opacity: 1; /* 表示領域に入ったら表示 */
       transform: translateY(0); /* 30px上に移動する */
-      transition-delay: .5s; /* フェード開始を0.5秒遅らせる */
+      transition-delay: .8s; /* フェード開始を0.8秒遅らせる */
 }
