@@ -57,7 +57,7 @@
 
 body {
       background-color : rgb(189, 189, 189);
-      padding:30px;
+      padding: 30px;
 }
 .starter-template {
       padding: 40px 20px;
@@ -87,10 +87,16 @@ p    {
       border-radius: 50%;
       line-height: 40px;
 }
-.sketch {
-      width: 75%;
-      margin: auto;
+.btnSketch {
       display: block;
+	margin: auto;
+}
+.sketch {
+      display: flex;
+	justify-content: center;
+}
+.profileStyle {
+      text-align: center;
 }
 .aboutStyle {
       text-align: center;
@@ -125,5 +131,5 @@ p    {
 .js-fadeUp.is-inview {
       opacity: 1; /* 表示領域に入ったら表示 */
       transform: translateY(0); /* 30px上に移動する */
-      transition-delay: .8s; /* フェード開始を0.8秒遅らせる */
+      transition-delay: .5s; /* フェード開始を0.5秒遅らせる */
 }
