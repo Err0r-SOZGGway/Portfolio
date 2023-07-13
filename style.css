@@ -63,6 +63,7 @@ body {
       padding: 40px 20px;
       background-color: white;
 }
+
 h1   {
       color: #000;
       -webkit-text-stroke: 0.5px #fff;
@@ -73,6 +74,7 @@ p    {
       font-size: 120%;
       font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 .title {
       text-align: center;
 }
@@ -87,6 +89,10 @@ p    {
       border-radius: 50%;
       line-height: 40px;
 }
+
+.githubLink {
+      text-align: center;
+}
 .btnSketch {
       display: block;
 	margin: auto;
@@ -95,12 +101,17 @@ p    {
       display: flex;
 	justify-content: center;
 }
+
 .profileStyle {
       text-align: center;
 }
 .aboutStyle {
       text-align: center;
 }
+.worksStyle {
+      text-align: center;
+}
+
 .fa-handshake-simple {
       color: rgb(123, 240, 121);
 }
