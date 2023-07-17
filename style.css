@@ -101,6 +101,12 @@ p    {
       display: flex;
 	justify-content: center;
 }
+.img-blockGame {
+      width: 600px;
+      height: 400px;
+      display: block;
+	margin: auto;
+}
 
 .profileStyle {
       text-align: center;
