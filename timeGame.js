@@ -25,3 +25,6 @@ const startButton = document.getElementById('countTime');
 startButton.onclick = () => {
   game.start();
 };
+
+module.exports = startButton;
+module.exports = game;

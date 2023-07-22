@@ -1,0 +1,24 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Loading.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "test:unit": "jest --maxWorkers=1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Err0r-SOZGGway/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Err0r-SOZGGway/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Err0r-SOZGGway/Portfolio#readme",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}
