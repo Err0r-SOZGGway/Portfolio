@@ -131,6 +131,9 @@ p    {
 .githubLink {
   @include textPosition;
 }
+.zennLink {
+  @include textPosition;
+}
 .btnSketch {
   @include imagePosition;
 }
