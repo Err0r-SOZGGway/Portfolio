@@ -113,6 +113,11 @@ p    {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.titleLogo {
+  width: 500px;
+  height: 125px;
+  @include imagePosition;
+}
 .title {
   @include textPosition;
 }
@@ -142,6 +147,11 @@ p    {
   justify-content: center;
 }
 .img-blockGame {
+  width: 600px;
+  height: 400px;
+  @include imagePosition;
+}
+.img-3dDog {
   width: 600px;
   height: 400px;
   @include imagePosition;
