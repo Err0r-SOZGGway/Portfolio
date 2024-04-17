@@ -198,7 +198,13 @@ p    {
 }
 
 .list-group {
-  font-size: 0.6em;
+  font-size: 1.1em;
+  @include mq($tb){
+    font-size: 0.9em;
+  }
+  @include mq($sp){
+    font-size: 0.6em;
+  }
 }
 
 .githubLink {
