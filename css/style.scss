@@ -176,6 +176,7 @@ p    {
 }
 .title {
   @include textPosition;
+  border-bottom : solid 2px #647989 ;
 }
 .titleMessage {
   @include mq($tb){
@@ -204,6 +205,14 @@ p    {
   }
   @include mq($sp){
     font-size: 0.6em;
+  }
+}
+
+.project {
+  border : solid 2px #333 ;
+  .projectTitle {
+    font-style: italic;
+    @include textPosition; 
   }
 }
 
