@@ -1,9 +1,20 @@
 const conversionButton = document.getElementById('conversion');
 const resultDivided = document.getElementById('result-area');
 
+sanitaize = {
+  encode : function (str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  },
+
+  decode : function (str) {
+    return str.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, '\'').replace(/&amp;/g, '&');
+  }
+};
+
 // ボタンが押されたら計算結果を出力する
 conversionButton.onclick = () => {
   const calendarInput = document.getElementById('calendar');
+  encode('calendar');
   let val = parseInt(calendarInput.value);
   // 入力欄が空欄、または指定されていない値を入力するとアラート
   if (document.seireki.calendar.value == "" || (val < 1926 || val > 2030)) {
