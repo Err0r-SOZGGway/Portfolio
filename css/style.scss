@@ -212,7 +212,7 @@ p    {
   border : solid 2px #333 ;
   .projectTitle {
     font-style: italic;
-    @include textPosition; 
+    @include textPosition;
   }
 }
 
@@ -230,6 +230,51 @@ p    {
   justify-content: center;
 }
 .img-blockGame {
+  width: 600px;
+  height: 400px;
+  @include imagePosition;
+  @include mq($tb){
+    width: 230px;
+    height: 260px;
+    @include imagePosition;
+  }
+  @include mq($sp){
+    width: 180px;
+    height: 200px;
+    @include imagePosition;
+  }
+}
+.img-eggGame {
+  width: 600px;
+  height: 400px;
+  @include imagePosition;
+  @include mq($tb){
+    width: 230px;
+    height: 260px;
+    @include imagePosition;
+  }
+  @include mq($sp){
+    width: 180px;
+    height: 200px;
+    @include imagePosition;
+  }
+}
+.img-navigationGame {
+  width: 600px;
+  height: 400px;
+  @include imagePosition;
+  @include mq($tb){
+    width: 230px;
+    height: 260px;
+    @include imagePosition;
+  }
+  @include mq($sp){
+    width: 180px;
+    height: 200px;
+    @include imagePosition;
+  }
+}
+.img-retry {
   width: 600px;
   height: 400px;
   @include imagePosition;
