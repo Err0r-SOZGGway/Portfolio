@@ -1,0 +1,12 @@
+body {
+  background-color: lightblue;
+  width: 500px;
+  padding-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+textarea {
+  width: 300px;
+  height: 100px;
+  resize: vertical;
+}
