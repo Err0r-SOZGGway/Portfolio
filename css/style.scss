@@ -304,6 +304,24 @@ p    {
     @include imagePosition;
   }
 }
+.present {
+  padding-top: 20em;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.presentButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  :hover {
+    background-color: #0056b3;
+  }
+}
 
 /* フェードイン(初期値) */
 .js-fadeUp {
