@@ -1,7 +1,7 @@
 function rarityOf(master, id) {
   const me = master.find(x => x.id === id);
   if (me) return me.rarity;
-  throw new Error(`no such ID is found: ${id}`);
+  throw new Error(`IDが見つかりません: ${id}`);
 }
 
 async function getDataFromDB() {
@@ -14,7 +14,7 @@ async function getDataFromDB() {
   const master = [
     { id: 'RPG', rarity: 5 }, // other attributes are ommitted
     { id: '音楽ゲーム', rarity: 5 },
-    { id: '5003', rarity: 5 },
+    { id: '育成ゲーム', rarity: 5 },
     { id: 'アクションゲーム', rarity: 4 },
     { id: '格闘ゲーム', rarity: 4 },
     { id: 'アドベンチャーゲーム', rarity: 4 },

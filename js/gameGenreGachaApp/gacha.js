@@ -1,5 +1,9 @@
-import { getConfig } from './config';
-
+/**
+ * ガチャテーブルを作成
+ *
+ * @param config
+ * @returns
+ */
 function createTable(config) {
   const table = [];
   for (const entry of config) {
@@ -11,10 +15,43 @@ function createTable(config) {
       const prob = (searched)
         ? entry.prob * searched[1]
         : nonPickProb;
-      table.push([cid, prob]);
+      table.push([cid, prob, entry.rarity]);
     }
   }
   return table;
+}
+
+function normalize(configLike) {
+  const ret = [];
+  const summed = configLike.reduce((acc, x) => acc + x.prob, 0);
+  configLike.forEach(entry => ret.push({ ...entry, prob: entry.prob / summed }));
+  return ret;
+}
+
+function createTableCeil(conf) {
+  const filtered = normalize(conf.filter(x => x.rarity === 5));
+  return createTable(filtered);
+}
+
+function createTableRescue(conf) {
+  const filtered = normalize(conf.filter(x => x.rarity > 3));
+  return createTable(filtered);
+}
+
+function gachaInternal(config, user, rval) {
+  const ceilCount = user.ceilCount || 0;
+  const table = ceilCount === 99
+    ? createTableCeil(config)
+    : user.rescue
+      ? createTableRescue(config)
+      : createTable(config);
+
+  let accum = 0;
+  for (const [cid, prob, rarity] of table) {
+    accum += prob;
+    if (rval < accum) return [cid, rarity];
+  }
+  throw new Error('システムエラーです');
 }
 
 function gacha(config, rval) {
@@ -28,12 +65,15 @@ function gacha(config, rval) {
   throw new Error('システムエラーです');
 }
 
-async function main() {
-  const config = await getConfig();
-  console.log(gacha(config, 0.001)); // 大当たり, キャラID 5001
-  console.log(gacha(config, 0.004)); // 大当たり, キャラID 5002
-  console.log(gacha(config, 0.04)); // あたり, キャラID 4001
-  console.log(gacha(config, 0.7)); // はずれ
+export function gacha10(config, user, rvals) {
+  const ids = [];
+  let { ceilCount } = user;
+  for (let i = 0, over4 = false; i < rvals.length; i += 1) {
+    const rescue = i === rvals.length - 1 && over4 === false;
+    const [id, rarity] = gachaInternal(config, { ceilCount, rescue }, rvals[i]);
+    ceilCount = rarity === 5 ? 0 : ceilCount + 1;
+    if (rarity > 3) over4 = true;
+    ids.push(id);
+  }
+  return { ids, ceilCount };
 }
-
-main();
