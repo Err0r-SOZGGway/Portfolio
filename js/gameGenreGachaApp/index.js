@@ -16,5 +16,3 @@ async function main() {
   console.log(gacha10(config, { ceilCount: 92 }, Array(10).fill(0.7)));
   // -> { ceilCount: 2, ids: [ '3002', '3002', '3002', '3002', '3002', '3002', '3002', '5002', '3002', '3002' ] }
 }
-
-main();
