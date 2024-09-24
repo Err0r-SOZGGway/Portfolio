@@ -8,17 +8,34 @@
 </head>
 <body>
   <h1>今日のゲームジャンルガチャ</h1>
-  <button onclick="generateRandomNumbers()">ガチャる！</button>
-  <div id="numbers_div"></div>
+  <button onclick="generateRandomNumbers()">10連ガチャる！</button>
+  <div id="ganre_div"></div>
   <script>
     function generateRandomNumbers() {
-      let numbers = [];
+      let ganre = [];
+      let star1Ganre = ['雀魂','Vampire Survivors','MineCraft','パルワールド','VALORANT'];
+      let star2Ganre = ['7Days to Die','Muse Dash','Terraria','VRChat','Lobotomy Corporation'];
+      let star3Ganre = ['Arcaea','MonsterHunter','Apex Legends'];
+      let star1Prob = 82;
+      let star2Prob = 96;
+      let star1GanreTotal = 5;
+      let star2GanreTotal = 5;
+      let star3GanreTotal = 3;
       for (let i = 0; i < 10; i++) {
-        let randomNum = Math.floor(Math.random() * 100);
-        numbers.push(randomNum);
+        let randomStarNum = Math.floor(Math.random() * 100) ;
+        if(randomStarNum <= star1Prob ){
+          let randomStar1GanreNum = Math.floor(Math.random() * star1GanreTotal) ;
+          ganre.push("★-"+star1Ganre[randomStar1GanreNum]);
+        }else if( randomStarNum <= star2Prob){
+          let randomStar2GanreNum = Math.floor(Math.random() * star2GanreTotal) ;
+          ganre.push("★★-"+star2Ganre[randomStar2GanreNum]);
+        }else{
+          let randomStar3GanreNum = Math.floor(Math.random() * star3GanreTotal) ;
+          ganre.push("★★★-"+star3Ganre[randomStar3GanreNum]);
+        }
       }
-      let numbersDiv = document.getElementById("numbers_div");
-      numbersDiv.innerHTML = "Random Numbers: " + numbers.join(", ");
+      let numbersDiv = document.getElementById("ganre_div");
+      numbersDiv.innerHTML = "結果: " + ganre.join(" ,");
     }
   </script>
 </body>
